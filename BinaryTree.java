@@ -1,10 +1,8 @@
 import java.util.*;
 
-// Clase BinaryTree para el árbol binario de búsqueda
 class BinaryTree<E extends Comparable<E>> {
     private TreeNode<E> root;
 
-    // Clase interna TreeNode para representar los nodos del árbol
     private static class TreeNode<E> {
         E data;
         TreeNode<E> left, right;
@@ -16,7 +14,6 @@ class BinaryTree<E extends Comparable<E>> {
         }
     }
 
-    // Método para insertar un nuevo elemento en el árbol
     public void insert(E data) {
         root = insertRecursively(root, data);
     }
@@ -35,7 +32,6 @@ class BinaryTree<E extends Comparable<E>> {
         return root;
     }
 
-    // Método para recorrer el árbol en orden y devolver una lista ordenada
     public List<E> inorderTraversal() {
         List<E> result = new ArrayList<>();
         inorderTraversal(root, result);
